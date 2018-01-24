@@ -47,7 +47,7 @@
 
     .close {
       background: none;
-      color: white;
+      color: #000;
       border: 0;
     }
 
@@ -151,9 +151,11 @@
 
     .overlay.open {
       display: grid;
+      align-items: center;
+      justify-items: center;
     }
 
-    .overlay figure {
+    .overlay .overlay-inner {
       background: white;
       width: 700px;
       padding: 20px;
@@ -167,7 +169,7 @@
   <script>
     const gallery = document.querySelector(".gallery");
     const overlay = document.querySelector(".overlay");
-    const overlayImage = overlay.querySelector('.img');
+    const overlayImage = overlay.querySelector('img');
     const overlayClose = overlay.querySelector('.close');
 
 
@@ -179,8 +181,18 @@
         return Math.floor(Math.random() * limit) + 1;
     }
     
-    function handleClick() {
-        
+    function handleClick(e) {
+        const src = e.currentTarget.querySelector('img').src;
+        overlayImage.src = src;
+        open();
+    }
+
+    function open() {
+        overlay.classList.add('open');
+    }
+
+    function close() {
+        overlay.classList.remove('open');
     }
 
         const digits = Array.from({ length : 50}, ()=>
@@ -192,6 +204,8 @@
         const items = document.querySelectorAll('.item');
 
         items.forEach(item => item.addEventListener('click', handleClick));
+
+        overlayClose.addEventListener('click', close);
 
   </script>
 </body>
