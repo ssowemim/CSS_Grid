@@ -65,8 +65,6 @@
       overflow: visible;
       align-content: start;
       justify-content: space-around;
-
-
     }
 
     .item {
@@ -111,6 +109,10 @@
       transform:  translateY(0);
     }
 
+    /*
+    Determines row size for each image.
+    v2, v3, v4
+    */
     .item.v2 {
       grid-row: span 2;
     }
@@ -123,6 +125,10 @@
       grid-row: span 4;
     }
 
+    /*
+    Determines column size for each image.
+    h2,h3,h4
+     */
     .item.h2 {
       grid-column: span 2;
     }
@@ -167,44 +173,72 @@
   </style>
 
   <script>
+
+      /**
+       * Javascript used to load up the page with 12 possible random images - ~60 images total
+       * @type {Element | null}
+       */
     const gallery = document.querySelector(".gallery");
     const overlay = document.querySelector(".overlay");
     const overlayImage = overlay.querySelector('img');
     const overlayClose = overlay.querySelector('.close');
 
-
+      /**
+       * Used to pick 12 possible random images, with an overlay and button as well
+       * @param h
+       * @param v
+       * @returns {string}
+       */
     function generateHTML([h, v]) {
         return ` <div class="item h${h} v${v}"> <img src="images/${randomNumber(12)}.jpg"> <div class="item__overlay"> <button>View -></button> </div></div>`;
     }
 
+      /**
+       * Assigns the random image number from 1-12.
+       * @param limit
+       * @returns {number}
+       */
     function randomNumber(limit) {
         return Math.floor(Math.random() * limit) + 1;
     }
-    
+
+      /**
+       * Handle the situation of clicking the image to make it bigger
+       * @param e
+       */
     function handleClick(e) {
         const src = e.currentTarget.querySelector('img').src;
         overlayImage.src = src;
         open();
     }
 
+      /**
+       * Open Image
+       */
     function open() {
         overlay.classList.add('open');
     }
 
+      /**
+       * Close Image
+       */
     function close() {
         overlay.classList.remove('open');
     }
 
+        // gets random number, gets image associated with that random number, the puts all those images into an array, also dictates random span for each image between 1-4
         const digits = Array.from({ length : 50}, ()=>
             [randomNumber(4), randomNumber(4)]).concat([[1,1], [1,1], [1,1], [1,1], [1,1], [1,1], [1,1]]);
 
+        // maps each image in the array into one main gallery
         const html = digits.map(generateHTML).join('');
         gallery.innerHTML = html;
 
+        // Listening for any click on the image
         const items = document.querySelectorAll('.item');
-
         items.forEach(item => item.addEventListener('click', handleClick));
 
+      //Listening for any close image click pressed.
         overlayClose.addEventListener('click', close);
 
   </script>
