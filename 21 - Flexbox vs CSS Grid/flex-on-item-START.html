@@ -20,8 +20,32 @@
   </div>
 
   <style>
+    /**
+    Making this work in FLEX fashion
+
     .controls {
       margin: 200px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .scrubber {
+      background: #BADA55;
+      height: 10px;
+      min-width: 100px;
+      border-radius: 10px;
+      flex: 1;
+    }
+    */
+
+    /**
+  Making this work in GRID fashion
+ */
+    .controls {
+      margin: 200px 0;
+      display: grid;
+      align-items: center;
+      grid-template-columns: auto auto auto 1fr auto auto;
     }
 
     .scrubber {
