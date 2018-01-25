@@ -114,6 +114,7 @@ h6 {
 .editor__code {
   display: grid;
   grid-template-columns: auto 1fr;
+  border: 2px solid white;
 }
 
 .editor__number {
