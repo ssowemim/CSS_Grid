@@ -1,8 +1,17 @@
-![](https://res.cloudinary.com/wesbos/image/upload/v1515524452/GRID-social-share_wlfzk3.png)
+### CSS_Grid - _Femi Sowemimo_
+This folder consists of a variety of projects built to showcase using HTML, CSS & JS
 
-# CSS Grid Course
+## INSTRUCTIONS
 
-Hey! These are the starter files and finished solutions. Grab the full course over at [CSSGrid.io](https://CSSGrid.io).
+- Download/Clone the CSS_Grid repository 
+- Install appropriate npm files by, then begin program - 
+```
+$ npm i 
+$ npm start
+```
 
 
-Course Completed by Femi Sowemimo
+
+- **_updated Jan 24, 2018_**
+
+
