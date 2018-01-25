@@ -1,4 +1,4 @@
-### CSS_Grid - _Femi Sowemimo_
+### CSS_Grid
 This folder consists of a variety of projects built to showcase using HTML, CSS & JS
 
 ## INSTRUCTIONS
