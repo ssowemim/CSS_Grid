@@ -10,8 +10,16 @@ $ npm i
 $ npm start
 ```
 
+## PROJECTS
 
+- Album layout | **COMPLETED**
+- Bootstrappy Grid w/ CSS Variables | ~
+- Codepen Duplicate | **COMPLETED**
+- Flexbox vs. CSS Grid | **COMPLETED**
+- Full Bleed Blog Layout | ~
+- Image Gallery | **COMPLETED**
+- Responsive Website | ~
 
-- **_updated Jan 25, 2018_**
+**_updated Jan 25, 2018_**
 
 
