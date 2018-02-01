@@ -13,7 +13,7 @@ $ npm start
 ## PROJECTS
 
 - Album layout | **COMPLETED**
-- Bootstrappy Grid w/ CSS Variables | ~
+- Bootstrappy Grid w/ CSS Variables | **COMPLETED**
 - Codepen Duplicate | **COMPLETED**
 - Flexbox vs. CSS Grid | **COMPLETED**
 - Full Bleed Blog Layout | ~
